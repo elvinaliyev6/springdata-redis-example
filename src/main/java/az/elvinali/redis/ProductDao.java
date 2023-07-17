@@ -23,6 +23,7 @@ public class ProductDao {
     }
 
     public Product findById(Long id){
+        System.out.println("called findById from DB");
         return (Product) redisTemplate.opsForHash().get(HASH_KEY,id);
     }
 
